@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(90deg, #161578, #b81055);
+}
+
+.app-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #fff;
+    width: 90%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.headings-container {
+    padding: 10px;
+}
+
+.interaction-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.text-control {
+    padding: 10px;
+    margin: 15px 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 90%;
+    resize: none;
+}
+
+.text-control::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* White with 50% opacity */
+    font-weight: bold;
+    font-size: 16px;
+    opacity: 1;
+}
+
+.text-control:focus {
+    outline: none;
+    border-color: #ff4081;
+}
+
+/* Playback speed dropdown styling */
+#speedSelect {
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.3); /* Slightly darker for visibility */
+    color: #fff;
+    border: 1px solid #fff;
+    font-size: 14px;
+    cursor: pointer;
+    width: 70%;
+}
+
+#speedSelect:focus {
+    outline: none;
+    border-color: #ff4081;
+    color: #fff;
+}
+
+/* Dropdown list background fix */
+#speedSelect option {
+    background: rgba(22, 21, 120, 0.8); /* Dark blue transparent */
+    color: #fff; /* White text */
+    border: none;
+}
+
+#speedSelect option:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight transparency on hover */
+    color: #fff;
+}
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 12px; /* More space between buttons */
+    margin-top: 20px; /* More space above buttons */
+}
+
+.small-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.btn {
+    background-image: linear-gradient(90deg, #F4244C, #F57D4E);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s;
+    padding: 10px 15px; /* Uniform button padding */
+    border-radius: 8px;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+#pauseBtn[disabled], #replayBtn[disabled], #stopBtn[disabled] {
+    background-color: #777;
+    cursor: not-allowed;
+}

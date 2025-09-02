@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text to Speech Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="app-container">
+            <div class="headings-container">
+                <h1>Text to Speech Converter</h1>
+                <h3>Enter Text and Convert into Speech</h3>
+            </div>
+
+            <div class="interaction-container">
+                <textarea id="textToConvert" placeholder="Enter text to convert into speech..." class="text-control"></textarea>
+
+                <p class="error-para"></p>
+
+                <!-- Playback Speed Dropdown -->
+                <label for="speedSelect" class="speed-label">Playback Speed:</label>
+                <select id="speedSelect" class="speed-select">
+                    <option value="1" selected>1x (Normal)</option>
+                    <option value="0.5">0.5x (Slow)</option>
+                    <option value="2">2x (Fast)</option>
+                    <option value="2.75">2.75x (Very Fast)</option>
+                </select>
+
+                <div class="buttons-container">
+                    <button class="btn" id="convertBtn">Play</button>
+                    <button class="btn" id="pauseBtn" disabled>Pause</button>
+                    <button class="btn" id="replayBtn" disabled>Replay</button>
+                    <button class="btn" id="stopBtn" disabled>Stop</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
